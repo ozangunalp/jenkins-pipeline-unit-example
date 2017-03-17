@@ -1,0 +1,12 @@
+@Library('commons@AMX-12984_cms_ts_to_jenkins') _
+import net.courtanet.jenkins.Utils
+import net.courtanet.jenkins.ScriptLoader
+
+node {
+    def utils = new Utils()
+    def loader = new ScriptLoader()
+    checkout utils.gitTools()
+    echo 'Hello Jenkins!'
+    def configure = loader.configure('src/main/jenkins/another.jenkins')
+    configure.execute()
+}

@@ -1,0 +1,14 @@
+
+Map<String, String> imports() {
+    [
+                    something: 'src/main/jenkins/something.jenkins',
+    ]
+}
+
+def execute() {
+    stage('hello') {
+        something.execute()
+    }
+}
+
+return this

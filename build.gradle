@@ -1,0 +1,16 @@
+apply plugin: 'groovy'
+
+repositories {
+    mavenCentral()
+//        maven {
+//          url "https://oss.sonatype.org/content/repositories/snapshots/"
+//        }
+    mavenLocal()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.7'
+    testCompile 'junit:junit:4.12'
+    testCompile 'com.lesfurets:jenkins-pipeline-unit:0.12'
+}
+
